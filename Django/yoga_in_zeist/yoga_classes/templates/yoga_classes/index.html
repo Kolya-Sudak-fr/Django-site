@@ -1,0 +1,136 @@
+<!-- FILEPATH: /c:/Users/sudak/Desktop/Studying/2-Kypc/Python/Django/yoga_in_zeist/yoga_classes/templates/yoga_classes/index.html -->
+{% load static %} <!-- BEGIN: Add this line to load static files -->
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'yoga_classes/main.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <script src="{% static 'yoga_classes/main.js' %}"></script>
+    <title>Yoga In Zeist</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Yoga In Zeist</h1>
+        <p>Experience the tranquility of yoga and holistic therapy.</p>
+        <div class="buttons">
+            <button>Войти</button> <!-- BEGIN: Add this line to create a login button -->
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <h2>Наші Інструктори</h2>
+        <div class="instructors"> 
+            <div class="instructor">
+                <img src="{% static 'yoga_classes/instructor1.jpg' %}" alt="Instructor 1" >
+                <p>Ім'я : </p>
+                <p>Досвід : 6+ років</p>
+            </div>
+
+            <div class="instructor">
+                <img src="{% static 'yoga_classes/instructor2.jpg' %}" alt="Instructor 2" >
+                <p>Ім'я : </p>
+                <p>Досвід : 8+ років</p>
+            </div>
+            <div class="instructor">
+                <img src="{% static 'yoga_classes/instructor3.jpg' %}" alt="Instructor 3" >
+                <p>Ім'я : </p>
+                <p>Досвід : 5+ років</p>
+            </div>
+
+            <div class="instructor">
+                <img src="{% static 'yoga_classes/instructor4.jpg' %}" alt="Instructor 4" >
+                <p>Ім'я : </p>
+                <p>Досвід : 9+ років</p>
+            </div>
+        </div>
+        <hr>
+        <div class="benefits">
+            <h2>Користь від Йоги</h2>
+            <p>Йога — це не просто фізичні вправи, але й практика, яка сприяє загальному покращенню фізичного і психічного стану. Деякі з основних користей йоги включають:</p>
+            <ul>
+                <li>1. Фізичне здоров'я: </li>
+                <p>Йога сприяє загартовуванню тіла, покращенню гнучкості та сили м'язів. Її асани допомагають покращити позначення тіла та збільшити енергетику.
+                </p>
+                <li>2. Психічне благополуччя: </li>
+                <p>Регулярна практика йоги допомагає зняти стрес, покращує сон і зосередження. Медитація сприяє зниженню рівня стресу та анксіозності.
+                </p>
+                <li>3. Духовний розвиток:</li>
+                <p>Йога відкриває шлях до внутрішнього пізнання та самовдосконалення. Вона сприяє розвитку внутрішнього спокою та глибокого з'єднання з собою.</p>
+                <li>4. Сприяння здоров'ю серця: </li>
+                <p>Дослідження показують, що регулярна практика йоги може покращити роботу серця, знизити кров'яний тиск і покращити кровообіг.</p>
+                <li>5. Сприяння гнучкості розуму: </li>
+                <p>Йога не лише формує гнучкість тіла, а й збільшує гнучкість розуму. Це сприяє кращому вирішенню проблем і прийняттю більш обдуманих рішень.</p>
+
+                <h3>На нашому сайті ви знайдете корисні поради, вправи та інформацію, яка допоможе вам відкрити для себе всі переваги йоги. Почніть свій шлях до здоров'я та гармонії вже сьогодні! </h3>
+
+                <!-- Додайте ще пункти за необхідності -->
+            </ul>
+        </div>
+        <hr>
+    </section>
+
+    <section class="therapy-sessions">
+        <h2>Сеанси терапії</h2>
+        <div class="session" onclick="showDescription('session1')">
+            <img src="{% static 'yoga_classes/session1.jpg' %}" alt="Session 1">
+            <p>Раджа-йога</p>
+        </div>
+
+        <div class="session" onclick="showDescription('session2')">
+            <img src="{% static 'yoga_classes/session2.jpg' %}" alt="Session 2">
+            <p>Карма-йога</p>
+        </div>
+        <div class="session" onclick="showDescription('session3')">
+            <img src="{% static 'yoga_classes/session3.jpg' %}" alt="Session 3">
+            <p>Джнана-йога</p>
+        </div>
+        <div class="session" onclick="showDescription('session4')">
+            <img src="{% static 'yoga_classes/session4.jpg' %}" alt="Session 4">
+            <p>Бхакти-йога</p>
+        </div>
+
+        <!-- Add two more session divs -->
+
+        <!-- Popup Descriptions -->
+        <div id="session1" class="popup">
+            <p>Ра́джа-йо́га («царская йога» или «царственная йога»), также известна как классическая йога — одна из шести ортодоксальных школ в философии индуизма, которая базируется на «Йога-сутрах» Патанджали. Основная цель раджа-йоги — контроль ума посредством медитации (дхьяна), осознание разницы между реальностью и иллюзией и достижение освобождения. </p>
+            <button onclick="closePopup('session1')">Закрыть</button>
+        </div>
+        <div id="session2" class="popup">
+            <p>Карма-йога основана на учении «Бхагавадгиты» — священного индуистского писания на санскрите, и её основной смысл состоит в выполнении предписанных обязанностей (дхармы) без привязанности к плодам труда. В результате такой деятельности становится возможным обретение мокши (спасения) или любви к Богу (бхакти). Это происходит посредством выполнения предписанных обязанностей без эгоистических мотивов с единственной целью удовлетворения Бога. </p>
+            <button onclick="closePopup('session2')">Закрыть</button>
+        </div>
+        <div id="session3" class="popup">
+            <p>Джня́на-йо́га, джна́на-йога или гья́на-йо́га — один из видов йоги и философии индуизма. В адвайта-веданте совершенством джнана-йоги является осознание единства индивида, или в санскритской терминологии атмана, с безличным аспектом Абсолютной Истины — Брахманом. В адвайте джнана-йога выступает как первичный путь к достижению мокши. Это путь самоосознания, на котором индивид с помощью своего ума отличает реальность от иллюзии и осознаёт своё тождество с Брахманом. Полностью осознав это, индивид достигает стадии мокши. </p>
+            <button onclick="closePopup('session3')">Закрыть</button>
+        </div>
+        <div id="session4" class="popup">
+            <p>Бха́кти-йо́га — один из четырёх основных видов йоги в философии и религиозной практике индуизма.
+                Практика бхакти-йоги направлена на "культивацию любви к Богу" посредством бхакти — служения Богу с любовью и преданностью. Практика бхакти-йоги рекомендуется в ряде священных текстов индуизма как самый лёгкий и действенный вид йоги. Так, в «Бхагавадгите» провозглашается её превосходство над остальными тремя основными видами йоги — карма-йогой, джнана-йогой и раджа-йогой. Направления в индуизме, в которых бхакти является основной практикой, называют движениями бхакти. В вайшнавизме выделяется девять основных форм бхакти-йоги. </p>
+            <button onclick="closePopup('session4')">Закрыть</button>
+        </div>
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email: info@yogainzeist.com</p>
+        <p>Address: Zeist, Netherlands</p>
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
